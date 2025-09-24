@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import familiaImg from "@/assets/familia.jpeg";
 import intimidadeImg from "@/assets/intimidade.jpeg";
 import noiteImg from "@/assets/noite.jpeg";
 import casualImg from "@/assets/casual.jpeg";
@@ -11,11 +10,6 @@ const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const photos = [
-    {
-      src: familiaImg,
-      title: "Família Completa",
-      description: "Nosso maior tesouro: nossa família unida"
-    },
     {
       src: noiteImg,
       title: "Momentos Noturno",

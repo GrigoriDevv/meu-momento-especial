@@ -1,4 +1,4 @@
-import { Calendar, Heart, Baby } from "lucide-react";
+import { Calendar, Heart } from "lucide-react";
 import casalImg from "@/assets/casal.jpeg";
 import intimidadeImg from "@/assets/intimidade.jpeg";
 
@@ -19,11 +19,11 @@ const Timeline = () => {
       date: "Crescendo Juntos"
     },
     {
-      icon: Baby,
-      title: "Nossa Família Cresceu",
-      description: "E então veio a maior benção das nossas vidas. Nossa família se completou e nosso amor se multiplicou de uma forma que nunca imaginamos ser possível.",
+      icon: Heart,
+      title: "Construindo Nossos Sonhos",
+      description: "Cada dia juntos fortalece nossa conexão. Descobrimos que o amor verdadeiro é aquele que cresce, se transforma e nos torna pessoas melhores.",
       image: casalImg,
-      date: "Família Completa"
+      date: "Sempre Juntos"
     }
   ];
 

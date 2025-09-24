@@ -1,5 +1,4 @@
 import { Heart } from "lucide-react";
-import familiaImg from "@/assets/familia.jpeg";
 
 const Hero = () => {
   return (
@@ -28,22 +27,8 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            Uma jornada de momentos especiais, sorrisos compartilhados e um amor que cresceu até se tornar uma família
+            Uma jornada de momentos especiais, sorrisos compartilhados e um amor que cresceu de forma única e verdadeira
           </p>
-
-          {/* Main photo */}
-          <div className="relative max-w-2xl mx-auto animate-scale-in" style={{ animationDelay: '1.2s' }}>
-            <div className="relative overflow-hidden rounded-3xl shadow-romantic">
-              <img 
-                src={familiaImg} 
-                alt="Nossa família" 
-                className="w-full h-auto object-cover transition-romantic hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 gradient-card rounded-full shadow-glow opacity-80"></div>
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-gold-light rounded-full shadow-card opacity-70"></div>
-          </div>
         </div>
       </div>
 

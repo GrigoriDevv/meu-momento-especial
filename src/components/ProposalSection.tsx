@@ -1,6 +1,6 @@
 import { Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import anelImg from "@/assets/anel.jpeg";
+import familiaImg from "@/assets/familia.jpeg";
 
 const ProposalSection = () => {
   return (
@@ -30,7 +30,7 @@ const ProposalSection = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            Depois de todos esses momentos mágicos, de construir nossa família e compartilhar tantos sonhos...
+            Depois de todos esses momentos mágicos, de viver tantas aventuras juntos e compartilhar tantos sonhos...
           </p>
           
           <p className="text-2xl md:text-3xl font-serif text-foreground font-medium">
@@ -38,12 +38,12 @@ const ProposalSection = () => {
           </p>
         </div>
 
-        {/* Ring photo */}
+        {/* Special photo */}
         <div className="relative max-w-md mx-auto mb-12 animate-scale-in" style={{ animationDelay: '0.5s' }}>
           <div className="relative overflow-hidden rounded-full shadow-glow">
             <img 
-              src={anelImg} 
-              alt="O anel do pedido" 
+              src={familiaImg} 
+              alt="Nosso momento especial" 
               className="w-full h-full object-cover transition-romantic hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-rose-deep/20 to-transparent"></div>
@@ -82,7 +82,7 @@ const ProposalSection = () => {
         {/* Final romantic message */}
         <div className="mt-16 p-8 gradient-card rounded-3xl shadow-romantic animate-fade-in" style={{ animationDelay: '1.2s' }}>
           <p className="font-serif text-xl md:text-2xl text-foreground font-medium leading-relaxed">
-            "Nosso amor já criou uma família linda, já superou desafios e já nos deu os momentos mais felizes das nossas vidas. 
+            "Nosso amor cresceu de uma forma tão especial, superou desafios e nos deu os momentos mais felizes das nossas vidas. 
             Agora eu quero que ele seja oficial, eterno e celebrado por todos que nos amam."
           </p>
           <div className="flex justify-center mt-6">
