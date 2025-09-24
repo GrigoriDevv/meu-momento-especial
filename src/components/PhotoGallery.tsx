@@ -12,13 +12,13 @@ const PhotoGallery = () => {
   const photos = [
     {
       src: noiteImg,
-      title: "Momentos Noturno",
-      description: "Sorrisos que iluminam até as noites mais escuras"
+      title: "Momentos juntos",
+      description: "Sorrisos mais sinceros, que iluminam até as noites mais escuras"
     },
     {
       src: casualImg,
       title: "Nosso Dia a Dia",
-      description: "A beleza está nos momentos mais simples"
+      description: "A beleza está nos momentos mais simples com você"
     },
     {
       src: sorrisoImg,

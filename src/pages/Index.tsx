@@ -7,7 +7,7 @@ import ProposalSection from "@/components/ProposalSection";
 const Index = () => {
   useEffect(() => {
     // Update document title for SEO
-    document.title = "Pedido de Namoro Especial - Nossa História de Amor";
+    document.title = "Nossa História de Amor";
     
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -34,10 +34,10 @@ const Index = () => {
       <footer className="gradient-card py-12 px-4 text-center">
         <div className="container mx-auto max-w-2xl">
           <p className="font-serif text-lg text-muted-foreground mb-4">
-            "O amor é a única força capaz de transformar um inimigo num amigo." - Martin Luther King Jr.
+            "A distância faz ao amor aquilo que o vento faz ao fogo: apaga o pequeno, inflama o grande." - Roger Bussy-Rabutin.
           </p>
           <p className="text-sm text-muted-foreground">
-            Feito com muito amor para uma pessoa muito especial 💕
+            Feito com muito amor, carinho e dedicação para a pessoa que me transformou em uma pessoa melhor, e faz isso todos os dias. 💕
           </p>
         </div>
       </footer>

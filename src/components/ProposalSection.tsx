@@ -1,6 +1,6 @@
 import { Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import familiaImg from "@/assets/familia.jpeg";
+import familiaImg from "@/assets/anel.jpeg";
 
 const ProposalSection = () => {
   return (
@@ -34,7 +34,7 @@ const ProposalSection = () => {
           </p>
           
           <p className="text-2xl md:text-3xl font-serif text-foreground font-medium">
-            Eu quero oficializar nosso amor! 💕
+            Eu quero declarar mais uma vez o nosso amor! 💕
           </p>
         </div>
 
@@ -74,7 +74,8 @@ const ProposalSection = () => {
               size="lg"
               className="border-2 border-rose-deep text-rose-deep hover:bg-rose-soft px-8 py-4 rounded-full transition-romantic text-lg hover:scale-105"
             >
-              Deixa eu pensar... 😄
+              Claro que sim! 💖
+              "(não, não é opção, né?)"
             </Button>
           </div>
         </div>
@@ -83,7 +84,7 @@ const ProposalSection = () => {
         <div className="mt-16 p-8 gradient-card rounded-3xl shadow-romantic animate-fade-in" style={{ animationDelay: '1.2s' }}>
           <p className="font-serif text-xl md:text-2xl text-foreground font-medium leading-relaxed">
             "Nosso amor cresceu de uma forma tão especial, superou desafios e nos deu os momentos mais felizes das nossas vidas. 
-            Agora eu quero que ele seja oficial, eterno e celebrado por todos que nos amam."
+            Agora eu quero que ele seja marcado por está data, eterno e celebrado por todos que nos amam."
           </p>
           <div className="flex justify-center mt-6">
             <Heart className="w-8 h-8 text-rose-deep" fill="currentColor" />

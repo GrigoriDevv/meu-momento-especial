@@ -1,13 +1,14 @@
 import { Calendar, Heart } from "lucide-react";
-import casalImg from "@/assets/casal.jpeg";
+import casalImg from "@/assets/primeirafoto.jpg";
 import intimidadeImg from "@/assets/intimidade.jpeg";
+import segundaImg from "@/assets/segundafoto.jpg";
 
 const Timeline = () => {
   const timelineItems = [
     {
       icon: Heart,
       title: "Nossos Primeiros Momentos",
-      description: "Quando tudo começou... aqueles primeiros olhares, sorrisos tímidos e a certeza de que algo especial estava nascendo entre nós.",
+      description: "Quando tudo começou... aqueles primeiros olhares, sorrisos tímidos e a certeza de que uma vida inteira juntos, não seria suficiente.",
       image: casalImg,
       date: "O Início"
     },
@@ -21,8 +22,8 @@ const Timeline = () => {
     {
       icon: Heart,
       title: "Construindo Nossos Sonhos",
-      description: "Cada dia juntos fortalece nossa conexão. Descobrimos que o amor verdadeiro é aquele que cresce, se transforma e nos torna pessoas melhores.",
-      image: casalImg,
+      description: "Cada dia juntos fortalece nossa conexão. Descobrimos que o amor verdadeiro é aquele que cresce que se constroí no decorrer da vida, se transforma e nos torna pessoas melhores.",
+      image: segundaImg,
       date: "Sempre Juntos"
     }
   ];
@@ -36,7 +37,7 @@ const Timeline = () => {
             Nossa Jornada
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cada momento foi especial, cada sorriso construiu nossa história, cada abraço fortaleceu nosso amor
+            Cada momento foi especial, cada sorriso construiu nossa história, cada dificuldade nos moldou a sermos mais fortes, cada abraço fortaleceu nosso amor
           </p>
         </div>
 
