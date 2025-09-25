@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import PhotoGallery from "@/components/PhotoGallery";
 import ProposalSection from "@/components/ProposalSection";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   useEffect(() => {
@@ -41,6 +42,9 @@ const Index = () => {
           </p>
         </div>
       </footer>
+      
+      {/* Toast notifications */}
+      <Toaster />
     </main>
   );
 };
