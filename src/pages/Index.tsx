@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import PhotoGallery from "@/components/PhotoGallery";
@@ -7,6 +7,15 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   const musicRef = useRef<HTMLIFrameElement>(null);
+  const musicStarted = useRef(false);
+
+  const startMusic = useCallback(() => {
+    if (!musicStarted.current && musicRef.current) {
+      musicStarted.current = true;
+      const iframe = musicRef.current;
+      iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
+    }
+  }, []);
 
   useEffect(() => {
     // Update document title for SEO
@@ -18,36 +27,28 @@ const Index = () => {
       metaDescription.setAttribute('content', 'Um pedido de namoro especial contando nossa linda história de amor, família e momentos únicos juntos.');
     }
 
-    let musicStarted = false;
-
-    const startMusic = () => {
-      if (!musicStarted && musicRef.current) {
-        musicStarted = true;
-        const iframe = musicRef.current;
-        iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
-        
-        // Remove listeners after music starts
-        document.removeEventListener('click', startMusic);
-        document.removeEventListener('scroll', startMusic);
-        document.removeEventListener('keydown', startMusic);
-      }
-    };
-
     // Try to start music after 5 seconds
     const musicTimer = setTimeout(startMusic, 5000);
 
     // Also try to start music on first user interaction
-    document.addEventListener('click', startMusic);
-    document.addEventListener('scroll', startMusic);
-    document.addEventListener('keydown', startMusic);
+    const handleInteraction = () => {
+      startMusic();
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('scroll', handleInteraction);
+      document.removeEventListener('keydown', handleInteraction);
+    };
+
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('scroll', handleInteraction);
+    document.addEventListener('keydown', handleInteraction);
 
     return () => {
       clearTimeout(musicTimer);
-      document.removeEventListener('click', startMusic);
-      document.removeEventListener('scroll', startMusic);
-      document.removeEventListener('keydown', startMusic);
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('scroll', handleInteraction);
+      document.removeEventListener('keydown', handleInteraction);
     };
-  }, []);
+  }, [startMusic]);
 
   return (
     <main className="min-h-screen">
