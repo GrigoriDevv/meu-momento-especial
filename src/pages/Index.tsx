@@ -18,16 +18,35 @@ const Index = () => {
       metaDescription.setAttribute('content', 'Um pedido de namoro especial contando nossa linda história de amor, família e momentos únicos juntos.');
     }
 
-    // Start background music after 5 seconds
-    const musicTimer = setTimeout(() => {
-      if (musicRef.current) {
-        // Enable audio by changing src to trigger autoplay - plays once to the end
+    let musicStarted = false;
+
+    const startMusic = () => {
+      if (!musicStarted && musicRef.current) {
+        musicStarted = true;
         const iframe = musicRef.current;
         iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
+        
+        // Remove listeners after music starts
+        document.removeEventListener('click', startMusic);
+        document.removeEventListener('scroll', startMusic);
+        document.removeEventListener('keydown', startMusic);
       }
-    }, 5000);
+    };
 
-    return () => clearTimeout(musicTimer);
+    // Try to start music after 5 seconds
+    const musicTimer = setTimeout(startMusic, 5000);
+
+    // Also try to start music on first user interaction
+    document.addEventListener('click', startMusic);
+    document.addEventListener('scroll', startMusic);
+    document.addEventListener('keydown', startMusic);
+
+    return () => {
+      clearTimeout(musicTimer);
+      document.removeEventListener('click', startMusic);
+      document.removeEventListener('scroll', startMusic);
+      document.removeEventListener('keydown', startMusic);
+    };
   }, []);
 
   return (
