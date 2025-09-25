@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import PhotoGallery from "@/components/PhotoGallery";
@@ -6,7 +6,15 @@ import ProposalSection from "@/components/ProposalSection";
 
 const Index = () => {
 
-  
+   const musicStarted = useRef(false);
+   const musicRef = useRef<HTMLIFrameElement>(null);
+  const startMusic = useCallback(() => {
+    if (!musicStarted.current && musicRef.current) {
+      musicStarted.current = true;
+      const iframe = musicRef.current;
+      iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
+    }
+  }, []);
   useEffect(() => {
     // Update document title for SEO
     document.title = "Nossa História de Amor";
