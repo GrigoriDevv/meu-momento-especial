@@ -128,7 +128,7 @@ const ProposalSection = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            Depois de todos esses momentos mágicos, de viver tantas aventuras juntos e compartilhar tantos sonhos...
+            Depois de todos esses momentos mágicos, de viver todos eles juntos e compartilhar tantos sonhos...
           </p>
           
           <p className="text-2xl md:text-3xl font-serif text-foreground font-medium">

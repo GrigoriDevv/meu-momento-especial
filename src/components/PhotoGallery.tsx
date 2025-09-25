@@ -23,17 +23,17 @@ const PhotoGallery = () => {
     {
       src: sorrisoImg,
       title: "Sorrisos Sinceros",
-      description: "Quando os corações estão felizes, os sorrisos são inevitáveis"
+      description: "Quando os corações estão felizes, os sorrisos são impossivelmente contidos"
     },
     {
       src: intimidadeImg,
       title: "Momentos Íntimos",
-      description: "A cumplicidade que só o amor verdadeiro traz"
+      description: "A cumplicidade e confidência que só o amor verdadeiro traz"
     },
     {
       src: casalImg,
       title: "Juntos Sempre",
-      description: "De mãos dadas, enfrentamos tudo juntos"
+      description: "De mãos dadas, enfrentamos tudo juntos, sendo maiores que tudo."
     }
   ];
 

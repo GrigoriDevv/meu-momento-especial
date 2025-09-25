@@ -8,14 +8,14 @@ const Timeline = () => {
     {
       icon: Heart,
       title: "Nossos Primeiros Momentos",
-      description: "Quando tudo começou... aqueles primeiros olhares, sorrisos tímidos e a certeza de que uma vida inteira juntos, não seria suficiente.",
+      description: "Quando tudo começou no 12 de junho mais especial da minha vida... aqueles primeiros olhares, sorrisos tímidos e a certeza de que uma vida inteira juntos, não seria suficiente.",
       image: casalImg,
       date: "O Início"
     },
     {
       icon: Heart,
       title: "Momentos Íntimos",
-      description: "Aprendendo a ser nós dois, criando nossa própria linguagem do amor, descobrindo que cada dia juntos era melhor que o anterior.",
+      description: "Aprendendo a ser nós dois, criando nossa própria linguagem do amor, descobrindo que cada dia, cada minuto juntos era melhor que o anterior.",
       image: intimidadeImg,
       date: "Crescendo Juntos"
     },
