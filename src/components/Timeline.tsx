@@ -16,14 +16,14 @@ const Timeline = () => {
       icon: Heart,
       title: "Momentos Íntimos",
       description: "Aprendendo a ser nós dois, criando nossa própria linguagem do amor, descobrindo que cada dia, cada minuto juntos era melhor que o anterior.",
-      image: intimidadeImg,
+      image: segundaImg,
       date: "Crescendo Juntos"
     },
     {
       icon: Heart,
       title: "Construindo Nossos Sonhos",
       description: "Cada dia juntos fortalece nossa conexão. Descobrimos que o amor verdadeiro é aquele que cresce que se constroí no decorrer da vida, se transforma e nos torna pessoas melhores.",
-      image: segundaImg,
+      image: intimidadeImg,
       date: "Sempre Juntos"
     }
   ];
