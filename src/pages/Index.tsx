@@ -21,9 +21,9 @@ const Index = () => {
     // Start background music after 5 seconds
     const musicTimer = setTimeout(() => {
       if (musicRef.current) {
-        // Enable audio by changing src to trigger autoplay
+        // Enable audio by changing src to trigger autoplay - plays once to the end
         const iframe = musicRef.current;
-        iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&loop=1&playlist=r73ANL4ecnE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0&start=0&end=0";
+        iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
       }
     }, 5000);
 
