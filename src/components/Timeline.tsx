@@ -31,6 +31,7 @@ const Timeline = () => {
   return (
     <section className="py-20 px-4 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
+        
         {/* Section header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">

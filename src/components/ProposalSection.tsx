@@ -11,7 +11,7 @@ const ProposalSection = () => {
     // Show congratulatory toast
     toast({
       title: "🎉 Que alegria! 🎉",
-      description: "Sabia que você diria sim! Nosso amor é realmente especial e agora é oficial! ❤️✨",
+      description: "Sabia que você diria sim! Nosso amor é realmente especial e agora está marcado nesta data! ❤️✨",
       duration: 5000,
     });
 
@@ -60,7 +60,7 @@ const ProposalSection = () => {
     // Show playful toast
     toast({
       title: "😄 Óbvio que sim! 😄",
-      description: "Haha, eu sabia que você não teria escolha! Afinal, somos perfeitos um para o outro! 💕",
+      description: "Haha, você não é louca de dizer não. Afinal, somos feitos um para o outro! 💕",
       duration: 5000,
     });
 
@@ -155,7 +155,7 @@ const ProposalSection = () => {
         {/* Call to action */}
         <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
           <p className="text-lg text-muted-foreground italic">
-            "Porque com você, cada dia é uma nova aventura e cada momento é um presente"
+            "Porque com você, cada dia é uma nova aventura e cada momento é um presente divino, um amor que se renova a cada amanhecer."
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

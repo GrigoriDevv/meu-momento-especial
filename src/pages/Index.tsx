@@ -15,20 +15,47 @@ const Index = () => {
       iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0";
     }
   }, []);
-  useEffect(() => {
+ useEffect(() => {
     // Update document title for SEO
     document.title = "Nossa História de Amor";
     
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Um pedido de namoro especial contando nossa linda história de amor, família e momentos únicos juntos.');
+      metaDescription.setAttribute('content', 'Um pedido de namoro especial contando nossa linda história de amor e momentos únicos juntos.');
     }
-  }, []);
+
+    // Try to start music after 5 seconds
+    const musicTimer = setTimeout(startMusic, 5000);
+
+    // Also try to start music on first user interaction
+    const handleInteraction = () => {
+      startMusic();
+      
+      document.addEventListener('scroll', handleInteraction);
+      document.addEventListener('keydown', handleInteraction);
+    };
+
+    return () => {
+      clearTimeout(musicTimer);
+     
+    };
+  }, [startMusic]);
 
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
+       {/* Hidden YouTube music player */}
+      <iframe
+        ref={musicRef}
+        width="0"
+        height="0"
+        style={{ opacity: 0, position: 'absolute', left: '-9999px' }}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Background Music"
+      />
       <Hero />
       
       {/* Timeline Section */}
