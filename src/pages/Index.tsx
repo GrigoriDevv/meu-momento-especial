@@ -12,7 +12,7 @@ const Index = () => {
     if (!musicStarted.current && musicRef.current) {
       musicStarted.current = true;
       const iframe = musicRef.current;
-      iframe.src = "https://www.youtube.com/watch?v=VWRkQARH-9o&list=RDVWRkQARH-9o&start_radio=1";
+      iframe.src = "https://youtu.be/VWRkQARH-9o?si=yGmAjfGV_VLLA4FJ";
     }
   }, []);
  useEffect(() => {
