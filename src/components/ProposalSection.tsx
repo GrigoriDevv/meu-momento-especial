@@ -1,8 +1,106 @@
 import { Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import familiaImg from "@/assets/anel.jpeg";
+import confetti from "canvas-confetti";
+import { useToast } from "@/hooks/use-toast";
 
 const ProposalSection = () => {
+  const { toast } = useToast();
+
+  const celebrateAcceptance = () => {
+    // Show congratulatory toast
+    toast({
+      title: "🎉 Que alegria! 🎉",
+      description: "Sabia que você diria sim! Nosso amor é realmente especial e agora é oficial! ❤️✨",
+      duration: 5000,
+    });
+
+    // Multiple confetti bursts for extra celebration
+    const duration = 3000;
+    const end = Date.now() + duration;
+
+    // Romantic colors - pink, red, gold
+    const colors = ['#ff69b4', '#ff1493', '#ffd700', '#ff6b9d', '#c44569'];
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: colors
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: colors
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+
+    // Heart-shaped confetti burst
+    setTimeout(() => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: colors,
+        shapes: ['circle'],
+        scalar: 1.2
+      });
+    }, 500);
+  };
+
+  const celebrateObviousChoice = () => {
+    // Show playful toast
+    toast({
+      title: "😄 Óbvio que sim! 😄",
+      description: "Haha, eu sabia que você não teria escolha! Afinal, somos perfeitos um para o outro! 💕",
+      duration: 5000,
+    });
+
+    // Same confetti effect
+    const duration = 3000;
+    const end = Date.now() + duration;
+    const colors = ['#ff69b4', '#ff1493', '#ffd700', '#ff6b9d', '#c44569'];
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: colors
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: colors
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+
+    setTimeout(() => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: colors,
+        shapes: ['circle'],
+        scalar: 1.2
+      });
+    }, 500);
+  };
   return (
     <section className="relative py-32 px-4 gradient-hero overflow-hidden">
       {/* Background decorations */}
@@ -65,6 +163,7 @@ const ProposalSection = () => {
               variant="romantic"
               size="lg" 
               className="font-semibold px-12 py-4 rounded-full text-lg"
+              onClick={celebrateAcceptance}
             >
               SIM! Eu aceito! 💖
             </Button>
@@ -73,9 +172,9 @@ const ProposalSection = () => {
               variant="outline" 
               size="lg"
               className="border-2 border-rose-deep text-rose-deep hover:bg-rose-soft px-8 py-4 rounded-full transition-romantic text-lg hover:scale-105"
+              onClick={celebrateObviousChoice}
             >
               Claro que sim! 💖
-              "(não, não é opção, né?)"
             </Button>
           </div>
         </div>
