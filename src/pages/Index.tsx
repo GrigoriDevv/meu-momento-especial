@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import PhotoGallery from "@/components/PhotoGallery";
@@ -6,6 +6,8 @@ import ProposalSection from "@/components/ProposalSection";
 import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
+  const musicRef = useRef<HTMLIFrameElement>(null);
+
   useEffect(() => {
     // Update document title for SEO
     document.title = "Nossa História de Amor";
@@ -15,10 +17,33 @@ const Index = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Um pedido de namoro especial contando nossa linda história de amor, família e momentos únicos juntos.');
     }
+
+    // Start background music after 5 seconds
+    const musicTimer = setTimeout(() => {
+      if (musicRef.current) {
+        // Enable audio by changing src to trigger autoplay
+        const iframe = musicRef.current;
+        iframe.src = "https://www.youtube.com/embed/r73ANL4ecnE?autoplay=1&loop=1&playlist=r73ANL4ecnE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&cc_load_policy=0&start=0&end=0";
+      }
+    }, 5000);
+
+    return () => clearTimeout(musicTimer);
   }, []);
 
   return (
     <main className="min-h-screen">
+      {/* Hidden YouTube music player */}
+      <iframe
+        ref={musicRef}
+        width="0"
+        height="0"
+        style={{ opacity: 0, position: 'absolute', left: '-9999px' }}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Background Music"
+      />
+      
       {/* Hero Section */}
       <Hero />
       
